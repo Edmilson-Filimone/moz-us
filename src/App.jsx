@@ -39,7 +39,7 @@ const US_LIST = [
   return (
     <div className='relative' onMouseEnter={()=> navPosition()}>
       <div className={`z-[1000] h-[70px] w-full  p-2 border bg-slate-200 rounded-bl-3xl rounded-br-3xl shadow-md`}>
-        <h5 className='text-center font-semibold text-xl'>Unidades sanitárias de Moçambique</h5>
+        <h5 className='text-center font-semibold text-xl'>Unidades Sanitárias de Moçambique</h5>
         <ul className='flex justify-center gap-4'>
           <li className={`cursor-pointer py-1 px-2 rounded-md ${showMap.summary ? 'bg-slate-500 text-white' : 'bg-transparent'}`} onClick={()=> setShowMap({presence:false, summary:true})} title='Número'>Número total</li>
           <li className={`cursor-pointer py-1 px-2 rounded-md ${showMap.presence ? 'bg-slate-500 text-white' : 'bg-transparent'}`} onClick={()=> setShowMap({presence:true, summary:false})} title='Distribuição'>Distribuição</li>
@@ -50,7 +50,7 @@ const US_LIST = [
       {showMap.summary && <SummaryMap data={summaryData} usType={usType}></SummaryMap>}
       
       {/* LEGENDS*/}
-      {showMap.presence && <div className='absolute top-[350px] right-4 z-50'>
+      {showMap.presence && <div className='absolute top-[320px] right-4 z-50'>
         <MapLegend labels={US_LIST} usType={usType}></MapLegend>
       </div>}
       <div className='absolute top-[90px] right-4 z-50'>
