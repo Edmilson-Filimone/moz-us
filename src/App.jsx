@@ -54,13 +54,15 @@ const US_LIST = [
         <MapLegend labels={US_LIST} usType={usType}></MapLegend>
       </div>}
       <div className='absolute top-[90px] right-16 z-50'>
-        <button className="w-[60px] h-[56px] p-2.5 shadow-md rounded-md bg-white" onClick={()=> setShowMenu('absolute')}>+</button>
+        <button className="w-[46px] h-[46px] p-1 shadow-md rounded-lg bg-white" onClick={()=> {setShowMenu('absolute'); window.scrollTo(0,0)}}>
+        <svg width="34px" height="34px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </button>
       </div>
-      <div className={`z-[1000] mt-5 ${showMenu} top-[65px] right-4 h-[220px] w-[200px] p-8 shadow-xl rounded-lg bg-[rgba(255,255,255,1)]`}>
-          <button className='block float-right text-lg font-semibold' onClick={()=>{setShowMenu('hidden')}}>{"X"}</button>
-          <h4 className='font-bold text-title-color text-center mb-5 border-b p-1'>Options</h4>
+      <div className={`z-[1000] mt-5 ${showMenu} top-[65px] right-4 h-[230px] w-[260px] p-8 shadow-xl rounded-lg bg-[rgba(255,255,255,1)]`}>
+          <button className='block float-right bg-red-400 px-2 text-white text-xl shadow-md rounded-md font-semibold font-mono' onClick={()=>{setShowMenu('hidden')}}>{"x"}</button>
+          <h4 className='font-bold text-title-color text-center mb-5 border-b p-1'>Opções</h4>
           <form className='flex flex-col gap-4'>
-            <label className="font-semibold text-title-color"  htmlFor="ustype">Tipo de US</label>
+            <label className="font-normal text-title-color"  htmlFor="ustype">Tipo de Unidade Sanitária</label>
             <select className='text-text-color bg-white p-1.5 border mb-4' name="ustype" id="ustype" onChange={onchange}>
               {US_LIST.map((it, k) => (<option key={k} value={it}>{it.replace("all", "Todas")}</option>))}
             </select>                      

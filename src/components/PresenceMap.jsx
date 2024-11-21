@@ -27,14 +27,15 @@ return (
         <MapContainer center={[-18.5, 35]} zoom={5.3} minZoom={5.6} scrollWheelZoom={true} style={{ height: "100%", width: "100%" }}>
           <TileLayer attribution="E. Filimone - Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL." url={baseMapUrl.dark} />
           <GeoJSON data={feature} onEachFeature={onEachFeature} style={layerStyles}/>
-          {usType == "Posto de Saúde" && <MarkerPaine data={data} usType={usType} radius={2} color={"#27518D"} /> }
-          {usType == "Centro de Saúde" && <MarkerPaine data={data} usType={usType} radius={2} color={'red'} />}
-          {usType == "Hospital Central" && <MarkerPaine data={data} usType={usType} radius={10} color={'yellow'} />}
-          {usType == "Hospital Distrital" && <MarkerPaine data={data} usType={usType} radius={5} color={'orange'} />}
-          {usType == "Hospital Provincial" && <MarkerPaine data={data} usType={usType} radius={10} color={'green'} />}
-          {usType == "Hospital Geral" && <MarkerPaine data={data} usType={usType} radius={10} color={'pink'} />}
-          {usType == "Hospital Militar" && <MarkerPaine data={data} usType={usType} radius={10} color={"brown"} />}
-          {usType == "Hospital Psiquiatrico" && <MarkerPaine data={data} usType={usType} radius={10} color={"violet"} />}
+          {usType == "Posto de Saúde" && <MarkerPaine data={data} usType={usType} radius={2} color={"orange"} /> }
+          {usType == "Centro de Saúde" && <MarkerPaine data={data} usType={usType} radius={2} color={'green'} />}
+          {usType == "Hospital Central" && <MarkerPaine data={data} usType={usType} radius={10} color={'pink'} />}
+          {usType == "Hospital Distrital" && <MarkerPaine data={data} usType={usType} radius={10} color={'#1D4ED8'} />}
+          {usType == "Hospital Rural" && <MarkerPaine data={data} usType={usType} radius={10} color={'yellow'} />}
+          {usType == "Hospital Provincial" && <MarkerPaine data={data} usType={usType} radius={10} color={'red'} />}
+          {usType == "Hospital Geral" && <MarkerPaine data={data} usType={usType} radius={10} color={'#7C3AED'} />}
+          {usType == "Hospital Psiquiatrico" && <MarkerPaine data={data} usType={usType} radius={10} color={"#6B7280"} />}
+          {usType == "Hospital Militar" && <MarkerPaine data={data} usType={usType} radius={10} color={"white"} />}
           {usType == "all" && <MarkerPaine data={data} usType={usType} radius={2.2} />}
         </MapContainer>
       </div>
@@ -44,15 +45,3 @@ return (
 }
 
 export default PresenceMap
-
-/*
-"Posto de Saúde"        
-"Centro de Saúde"
-"Hospital Central"  
-"Hospital Distrital"  
-"Hospital Rural"       
-"Hospital Provincial" 
-"Hospital Geral"    
-"Hospital Psiquiatrico" 
-"Hospital Militar" 
-*/

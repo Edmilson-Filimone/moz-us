@@ -35,13 +35,16 @@ function MarkerPaine({data, usType, color, radius}) {
             break;
           case  item.class == type[5]:
             color = "red";
+            break
           case  item.class == type[6]:
-            color = "red";
+            color = "violet";
+            break
           case  item.class == type[7]:
-            color = "red";
-          case  item.class == type[8]:
-            color = "red";
+            color = "gray";
             break;
+          case  item.class == type[7]:
+            color = "white";
+              break;
         }
         return color;
       };
@@ -70,7 +73,7 @@ function MarkerPaine({data, usType, color, radius}) {
             key={key}
             center={[item.lat, item.lon]}
             radius={radius}
-            fillOpacity={0.5}
+            fillOpacity={0.8}
             fillColor={color ? color : bubleColorClassification(item)}
             stroke={false}
           >
