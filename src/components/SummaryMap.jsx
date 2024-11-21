@@ -26,7 +26,7 @@ return (
     <section className={'relative z-50 transition ease-out '+className} >
       <div className="text-2xl text-center font-semibold"></div>
       <div className="sticky top-24 w-full h-screen overflow-hidden rounded-lg shadow-lg border">
-        <MapContainer center={[-19, 35]} zoom={5.8} minZoom={5.2} scrollWheelZoom={true} style={{ height: "100%", width: "100%" }}>
+        <MapContainer center={[-18.5, 35]} zoom={5.7} minZoom={5.2} scrollWheelZoom={true} style={{ height: "100%", width: "100%" }}>
           <TileLayer attribution="E. Filimone - Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL." url={baseMapUrl.dark} />
           <GeoJSON data={feature} onEachFeature={onEachFeature} style={layerStyles}/>
           {<MarkerPaineCostume data={data} usType={usType} radius={20} color={"#27518D"} /> }

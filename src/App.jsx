@@ -41,20 +41,20 @@ const US_LIST = [
       <div className={`z-[1000] h-[70px] w-full  p-2 border bg-slate-200 rounded-bl-3xl rounded-br-3xl shadow-md`}>
         <h5 className='text-center font-semibold text-xl'>Unidades sanitárias de Moçambique</h5>
         <ul className='flex justify-center gap-4'>
-          <li className={`cursor-pointer py-1 px-2 rounded-md ${showMap.summary ? 'bg-slate-500 text-white' : 'bg-transparent'}`} onClick={()=> setShowMap({presence:false, summary:true})}> Número total</li>
-          <li className={`cursor-pointer py-1 px-2 rounded-md ${showMap.presence ? 'bg-slate-500 text-white' : 'bg-transparent'}`} onClick={()=> setShowMap({presence:true, summary:false})}>Distribuição</li>
-          <li className='cursor-pointer py-1 px-2'><a href="https://sis-ma.in/?page_id=1085" target="_blank" rel="noopener noreferrer">Fonte</a></li>
+          <li className={`cursor-pointer py-1 px-2 rounded-md ${showMap.summary ? 'bg-slate-500 text-white' : 'bg-transparent'}`} onClick={()=> setShowMap({presence:false, summary:true})} title='Número'>Número total</li>
+          <li className={`cursor-pointer py-1 px-2 rounded-md ${showMap.presence ? 'bg-slate-500 text-white' : 'bg-transparent'}`} onClick={()=> setShowMap({presence:true, summary:false})} title='Distribuição'>Distribuição</li>
+          <li className='cursor-pointer py-1 px-2'><a href="https://sis-ma.in/?page_id=1085" target="_blank" rel="noopener noreferrer" title='fonte dos dados SIS-MA'>Fonte</a></li>
         </ul>
       </div>
       {showMap.presence && <PresenceMap data={data} usType={usType}></PresenceMap>}
       {showMap.summary && <SummaryMap data={summaryData} usType={usType}></SummaryMap>}
       
       {/* LEGENDS*/}
-      {showMap.presence && <div className='absolute top-[350px] right-16 z-50'>
+      {showMap.presence && <div className='absolute top-[350px] right-4 z-50'>
         <MapLegend labels={US_LIST} usType={usType}></MapLegend>
       </div>}
-      <div className='absolute top-[90px] right-16 z-50'>
-        <button className="w-[46px] h-[46px] p-1 shadow-md rounded-lg bg-white" onClick={()=> {setShowMenu('absolute'); window.scrollTo(0,0)}}>
+      <div className='absolute top-[90px] right-4 z-50'>
+        <button title='Menu' className="w-[46px] h-[46px] p-1 shadow-md rounded-lg bg-white" onClick={()=> {setShowMenu('absolute'); window.scrollTo(0,0)}}>
         <svg width="34px" height="34px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
         </button>
       </div>

@@ -1,7 +1,7 @@
 function MapLegend({labels, usType}) {
 
   return (
-    <div className="min-w-[250px] min-h-[300px] ">
+    <div className="min-w-[210px] min-h-[300px] ">
     <h3 className='text-white font-semibold text-lg text-center my-4 p-4 bg-[rgba(0,0,0,0.7)] xl:bg-[rgba(0,0,0,0.45)] border-black rounded-lg z-50'>{usType.replace("all", "")}</h3>
     {
     <ul className="my-2 p-4 bg-[rgba(0,0,0,0.7)] xl:bg-[rgba(0,0,0,0.45)] border-black rounded-lg z-50">

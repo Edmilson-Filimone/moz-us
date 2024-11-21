@@ -23,8 +23,8 @@ return (
   <>
     <section className={'relative z-50 transition ease-out '+className}>
       <div className="text-2xl text-center font-semibold"></div>
-      <div className="sticky top-24 w-full h-[750px] overflow-hidden rounded-lg shadow-lg border">
-        <MapContainer center={[-18.5, 35]} zoom={5.3} minZoom={5.6} scrollWheelZoom={true} style={{ height: "100%", width: "100%" }}>
+      <div className="sticky top-24 w-full h-screen overflow-hidden rounded-lg shadow-lg border">
+        <MapContainer center={[-18.5, 35]} zoom={5.7} minZoom={5.2} scrollWheelZoom={true} style={{ height: "100%", width: "100%" }}>
           <TileLayer attribution="E. Filimone - Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL." url={baseMapUrl.dark} />
           <GeoJSON data={feature} onEachFeature={onEachFeature} style={layerStyles}/>
           {usType == "Posto de Saúde" && <MarkerPaine data={data} usType={usType} radius={2} color={"orange"} /> }
