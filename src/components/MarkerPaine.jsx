@@ -77,7 +77,7 @@ function MarkerPaine({data, usType, color, radius}) {
             fillColor={color ? color : bubleColorClassification(item)}
             stroke={false}
           >
-            <Tooltip>US de {item.us}</Tooltip>
+            <Tooltip>US {item.us}</Tooltip>
           </CircleMarker>
         </> 
     ))
