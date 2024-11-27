@@ -43,7 +43,7 @@ const US_LIST = [
         <ul className='flex justify-center gap-4'>
           <li className={`cursor-pointer py-1 px-2 rounded-md ${showMap.summary ? 'bg-slate-500 text-white' : 'bg-transparent'}`} onClick={()=> setShowMap({presence:false, summary:true})} title='Número'>Número total</li>
           <li className={`cursor-pointer py-1 px-2 rounded-md ${showMap.presence ? 'bg-slate-500 text-white' : 'bg-transparent'}`} onClick={()=> setShowMap({presence:true, summary:false})} title='Distribuição'>Distribuição</li>
-          <li className='cursor-pointer py-1 px-2'><a href="https://sis-ma.in/?page_id=1085" target="_blank" rel="noopener noreferrer" title='fonte dos dados SIS-MA'>Fonte</a></li>
+          <li className='cursor-pointer py-1 px-2'><a href="https://data.humdata.org/dataset/mozambique-health-facilities" target="_blank" rel="noopener noreferrer" title='fonte dos dados SIS-MA 2019'>Fonte</a></li>
         </ul>
       </div>
       {showMap.presence && <PresenceMap data={data} usType={usType}></PresenceMap>}
