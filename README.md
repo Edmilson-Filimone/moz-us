@@ -1,4 +1,4 @@
-# Interactive Health Facilities Map — Mozambique
+# Interactive Health Facilities Map - Mozambique
 
 This repository hosts an interactive web map that visualizes all health facilities in Mozambique. The application allows users to explore the geographic distribution of health facilities and obtain summary statistics by province and facility type.
 
@@ -12,4 +12,4 @@ Key Features
 
   - Total number of health facilities per province
 
-  -Breakdown by facility category
+  - Breakdown by facility category
