@@ -1,8 +1,15 @@
-# React + Vite
+# Interactive Health Facilities Map — Mozambique
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository hosts an interactive web map that visualizes all health facilities in Mozambique. The application allows users to explore the geographic distribution of health facilities and obtain summary statistics by province and facility type.
 
-Currently, two official plugins are available:
+Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive Map displaying all registered health facilities across Mozambique
+
+- Filtering by Facility Type (e.g., hospitals, health centers, posts, specialized units)
+
+- **Provincial Aggregation**:
+
+  - Total number of health facilities per province
+
+  -Breakdown by facility category
